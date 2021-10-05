@@ -10,13 +10,14 @@ RUN apt install -y automake libtool pkg-config libgstreamer1.0-dev  libgstreamer
 EXPOSE 5001 319 320 
 
 # Fetch the code
-RUN git clone https://github.com/RidgeRun/gstd-1.x.git
+# RUN git clone https://github.com/RidgeRun/gstd-1.x.git
+RUN git clone https://github.com/cthellman/gstd.git
 
 # Build and install 
-WORKDIR /gstd-1.x
-RUN ./autogen.sh
+WORKDIR /gstd
+RUN sh ./autogen.sh
 RUN ./configure
 RUN make
 RUN sudo make install
 
-CMD ["gstd", "--enable-http-protocol"]
+CMD ["gstd", "--enable-http-protocol", "--http-address=0.0.0.0"]
