@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E70E54BD-1E60-4302-928E-3DCCCDC30752}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\libgstc\dynamic_property_change.c" />
+    <ClCompile Include="examples\libgstc\gapless_playback.c" />
+    <ClCompile Include="examples\libgstc\mp4_recording.c" />
+    <ClCompile Include="examples\libgstc\simple_pipeline.c" />
+    <ClCompile Include="gstd\gstd.c" />
+    <ClCompile Include="gstd\gstd_bus_msg.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_element.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_notify.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_qos.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_simple.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_state_changed.c" />
+    <ClCompile Include="gstd\gstd_bus_msg_stream_status.c" />
+    <ClCompile Include="gstd\gstd_callback.c" />
+    <ClCompile Include="gstd\gstd_daemon.c" />
+    <ClCompile Include="gstd\gstd_debug.c" />
+    <ClCompile Include="gstd\gstd_element.c" />
+    <ClCompile Include="gstd\gstd_event_creator.c" />
+    <ClCompile Include="gstd\gstd_event_factory.c" />
+    <ClCompile Include="gstd\gstd_event_handler.c" />
+    <ClCompile Include="gstd\gstd_http.c" />
+    <ClCompile Include="gstd\gstd_icreator.c" />
+    <ClCompile Include="gstd\gstd_ideleter.c" />
+    <ClCompile Include="gstd\gstd_iformatter.c" />
+    <ClCompile Include="gstd\gstd_ipc.c" />
+    <ClCompile Include="gstd\gstd_ireader.c" />
+    <ClCompile Include="gstd\gstd_iupdater.c" />
+    <ClCompile Include="gstd\gstd_json_builder.c" />
+    <ClCompile Include="gstd\gstd_list.c" />
+    <ClCompile Include="gstd\gstd_list_reader.c" />
+    <ClCompile Include="gstd\gstd_log.c" />
+    <ClCompile Include="gstd\gstd_msg_reader.c" />
+    <ClCompile Include="gstd\gstd_msg_type.c" />
+    <ClCompile Include="gstd\gstd_no_creator.c" />
+    <ClCompile Include="gstd\gstd_no_deleter.c" />
+    <ClCompile Include="gstd\gstd_no_reader.c" />
+    <ClCompile Include="gstd\gstd_no_updater.c" />
+    <ClCompile Include="gstd\gstd_object.c" />
+    <ClCompile Include="gstd\gstd_parser.c" />
+    <ClCompile Include="gstd\gstd_pipeline.c" />
+    <ClCompile Include="gstd\gstd_pipeline_bus.c" />
+    <ClCompile Include="gstd\gstd_pipeline_creator.c" />
+    <ClCompile Include="gstd\gstd_pipeline_deleter.c" />
+    <ClCompile Include="gstd\gstd_property.c" />
+    <ClCompile Include="gstd\gstd_property_array.c" />
+    <ClCompile Include="gstd\gstd_property_boolean.c" />
+    <ClCompile Include="gstd\gstd_property_enum.c" />
+    <ClCompile Include="gstd\gstd_property_flags.c" />
+    <ClCompile Include="gstd\gstd_property_int.c" />
+    <ClCompile Include="gstd\gstd_property_reader.c" />
+    <ClCompile Include="gstd\gstd_property_string.c" />
+    <ClCompile Include="gstd\gstd_return_codes.c" />
+    <ClCompile Include="gstd\gstd_session.c" />
+    <ClCompile Include="gstd\gstd_signal.c" />
+    <ClCompile Include="gstd\gstd_signal_list.c" />
+    <ClCompile Include="gstd\gstd_signal_reader.c" />
+    <ClCompile Include="gstd\gstd_socket.c" />
+    <ClCompile Include="gstd\gstd_state.c" />
+    <ClCompile Include="gstd\gstd_tcp.c" />
+    <ClCompile Include="gstd\gstd_unix.c" />
+    <ClCompile Include="gst_client\gst_client.c" />
+    <ClCompile Include="libgstc\c\libgstc.c" />
+    <ClCompile Include="libgstc\c\libgstc_assert.c" />
+    <ClCompile Include="libgstc\c\libgstc_json.c" />
+    <ClCompile Include="libgstc\c\libgstc_socket.c" />
+    <ClCompile Include="libgstc\c\libgstc_thread.c" />
+    <ClCompile Include="tests\gstd\test_gstd_no_create.c" />
+    <ClCompile Include="tests\gstd\test_gstd_pipeline_create.c" />
+    <ClCompile Include="tests\gstd\test_gstd_session.c" />
+    <ClCompile Include="tests\gstd\test_gstd_state.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_client.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_debug.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_element_get.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_element_set.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_json.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_ping.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_bus_wait.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_bus_wait_async.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_create.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_delete.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_flush_start.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_flush_stop.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_get_graph.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_get_state.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_inject_eos.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_list.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_list_elements.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_list_properties.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_list_signals.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_pause.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_play.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_seek.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_signal_connect.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_signal_disconnect.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_stop.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_pipeline_verbose.c" />
+    <ClCompile Include="tests\libgstc\c\test_libgstc_socket.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gstd\gstd_bus_msg.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_element.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_notify.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_qos.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_simple.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_state_changed.h" />
+    <ClInclude Include="gstd\gstd_bus_msg_stream_status.h" />
+    <ClInclude Include="gstd\gstd_callback.h" />
+    <ClInclude Include="gstd\gstd_daemon.h" />
+    <ClInclude Include="gstd\gstd_debug.h" />
+    <ClInclude Include="gstd\gstd_element.h" />
+    <ClInclude Include="gstd\gstd_event_creator.h" />
+    <ClInclude Include="gstd\gstd_event_factory.h" />
+    <ClInclude Include="gstd\gstd_event_handler.h" />
+    <ClInclude Include="gstd\gstd_http.h" />
+    <ClInclude Include="gstd\gstd_icreator.h" />
+    <ClInclude Include="gstd\gstd_ideleter.h" />
+    <ClInclude Include="gstd\gstd_iformatter.h" />
+    <ClInclude Include="gstd\gstd_ipc.h" />
+    <ClInclude Include="gstd\gstd_ireader.h" />
+    <ClInclude Include="gstd\gstd_iupdater.h" />
+    <ClInclude Include="gstd\gstd_json_builder.h" />
+    <ClInclude Include="gstd\gstd_list.h" />
+    <ClInclude Include="gstd\gstd_list_reader.h" />
+    <ClInclude Include="gstd\gstd_log.h" />
+    <ClInclude Include="gstd\gstd_msg_reader.h" />
+    <ClInclude Include="gstd\gstd_msg_type.h" />
+    <ClInclude Include="gstd\gstd_no_creator.h" />
+    <ClInclude Include="gstd\gstd_no_deleter.h" />
+    <ClInclude Include="gstd\gstd_no_reader.h" />
+    <ClInclude Include="gstd\gstd_no_updater.h" />
+    <ClInclude Include="gstd\gstd_object.h" />
+    <ClInclude Include="gstd\gstd_parser.h" />
+    <ClInclude Include="gstd\gstd_pipeline.h" />
+    <ClInclude Include="gstd\gstd_pipeline_bus.h" />
+    <ClInclude Include="gstd\gstd_pipeline_creator.h" />
+    <ClInclude Include="gstd\gstd_pipeline_deleter.h" />
+    <ClInclude Include="gstd\gstd_property.h" />
+    <ClInclude Include="gstd\gstd_property_array.h" />
+    <ClInclude Include="gstd\gstd_property_boolean.h" />
+    <ClInclude Include="gstd\gstd_property_enum.h" />
+    <ClInclude Include="gstd\gstd_property_flags.h" />
+    <ClInclude Include="gstd\gstd_property_int.h" />
+    <ClInclude Include="gstd\gstd_property_reader.h" />
+    <ClInclude Include="gstd\gstd_property_string.h" />
+    <ClInclude Include="gstd\gstd_return_codes.h" />
+    <ClInclude Include="gstd\gstd_session.h" />
+    <ClInclude Include="gstd\gstd_signal.h" />
+    <ClInclude Include="gstd\gstd_signal_list.h" />
+    <ClInclude Include="gstd\gstd_signal_reader.h" />
+    <ClInclude Include="gstd\gstd_socket.h" />
+    <ClInclude Include="gstd\gstd_state.h" />
+    <ClInclude Include="gstd\gstd_tcp.h" />
+    <ClInclude Include="gstd\gstd_unix.h" />
+    <ClInclude Include="libgstc\c\libgstc.h" />
+    <ClInclude Include="libgstc\c\libgstc_assert.h" />
+    <ClInclude Include="libgstc\c\libgstc_json.h" />
+    <ClInclude Include="libgstc\c\libgstc_socket.h" />
+    <ClInclude Include="libgstc\c\libgstc_thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="examples\web\menu.html" />
+    <None Include="examples\web\src\controller_app.html" />
+    <None Include="examples\web\src\video_player_app.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
