@@ -11,11 +11,12 @@ EXPOSE 5001 319 320
 
 # Fetch the code
 # RUN git clone https://github.com/RidgeRun/gstd-1.x.git
-RUN git clone https://github.com/cthellman/gstd.git
+# RUN git clone https://github.com/cthellman/gstd.git
+RUN git clone https://github.com/cthellman/gstd-1.x.git
 
 # Build and install 
-WORKDIR /gstd
-RUN sh ./autogen.sh
+WORKDIR /gstd-1.x
+RUN ./autogen.sh
 RUN ./configure
 RUN make
 RUN sudo make install
